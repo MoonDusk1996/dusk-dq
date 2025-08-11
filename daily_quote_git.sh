@@ -11,7 +11,7 @@ cd "$REPO_DIR" || exit 1
 git pull --rebase
 
 if [ -f "$CACHE_FILE" ] && [ "$(stat -c %y "$CACHE_FILE" | cut -d' ' -f1)" = "$(date +%Y-%m-%d)" ]; then
-    echo "Frase já atualizada hoje."
+    echo "Frase do dia já atualizada."
 else
     QUOTE=$(curl -s https://zenquotes.io/api/random | jq -r '.[0] | "\(.q) — \(.a)"' | trans -b :pt)
     echo "$QUOTE" > "$CACHE_FILE"
