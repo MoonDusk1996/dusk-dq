@@ -5,7 +5,7 @@ CACHE_FILE="$REPO_DIR/daily_quote.txt"
 
 # Clona se não existir
 if [ ! -d "$REPO_DIR/.git" ]; then
-    git clone git@github.com:usuario/daily-quote-sync.git "$REPO_DIR"
+    git clone git@github.com:MoonDusk1996/dusk-dq.git "$REPO_DIR"
 fi
 
 cd "$REPO_DIR" || exit 1
